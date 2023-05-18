@@ -6,7 +6,8 @@ module.exports = {
         .setName('initbank')
         .setDescription('Initialize the banking system for the server.'),
     run: ({ interaction, client, handler }) =>{
-        let serverID = interaction.server.id;
+        let serverID = interaction.server;
+        console.log(serverID)
         let path = "__dirname/../../data/banks/servers/"+serverID;
         
         if(fs.existsSync(path))
