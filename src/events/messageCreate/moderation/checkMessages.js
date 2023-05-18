@@ -1,4 +1,4 @@
-const List = require("./../../../../database/bannedWords.json");
+const List = require("./../../../../database/bannedWords.json").words;
 
 module.exports = (msg, client, handler) => {
     if(msg.author.tag == client.user.tag) return;
@@ -6,4 +6,5 @@ module.exports = (msg, client, handler) => {
     {
         msg.delete
     }
+    console.log(List);
 }
