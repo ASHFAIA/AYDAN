@@ -7,7 +7,7 @@ require('dotenv').config();
 const bot = new Client({
     intents: [
         IntentsBitField.Flags.Guilds,
-        IntentsBitField.Flags.Messages,
+        IntentsBitField.Flags.MessageContent,
         IntentsBitField.Flags.GuildMessages,
         IntentsBitField.Flags.GuildMembers,
     ]
