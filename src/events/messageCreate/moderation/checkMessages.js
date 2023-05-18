@@ -2,7 +2,7 @@ const List = require("./../../../../database/bannedWords.json").words;
 
 module.exports = (msg, client, handler) => {
     if(msg.author.tag == client.user.tag) return;
-    if(List.some(i => msg.content.includes(i)));
+    if(List.some(word => msg.content.includes(word)));
     {
         console.log(msg.content);
     }
