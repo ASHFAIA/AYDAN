@@ -1,4 +1,4 @@
-const List = require('__dirname/../../../../database/bannedWords.json').words;
+const List = require("__dirname/../../../../database/bannedWords.json");
 
 module.exports = (msg, client, handler) => {
     if(msg.author.tag == client.user.tag) return;
