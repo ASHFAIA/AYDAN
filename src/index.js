@@ -16,8 +16,7 @@ const bot = new Client({
 new CommandHandler({
     client : bot,
     commandsPath: path.join(__dirname,'commands'),
-    EventsPath: path.join(__dirname,'events'),
-    testServer: '1103047224168026182'
+    EventsPath: path.join(__dirname,'events')
 })
 
 
