@@ -131,4 +131,4 @@ dist
 
 database/
 .env
-.cmd
+update.cmd
