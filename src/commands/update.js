@@ -9,7 +9,7 @@ module.exports = {
         .setDescription('Pulls the latest update from github'),
     run: ({interaction, client, handler}) => {
         let author = interaction.user.id;
-        let processPath = process.env.batPath;
+        let processPath = process.env.cmdPath;
         if(AllowedAccounts.includes(author))
         {
             interaction.reply("Pulling updates!")
