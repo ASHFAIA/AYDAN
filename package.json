@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "child_process": "^1.0.2",
     "discord.js": "^14.11.0",
     "djs-commander": "^0.0.45",
     "dotenv": "^16.0.3"
