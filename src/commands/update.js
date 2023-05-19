@@ -8,8 +8,7 @@ module.exports = {
         .setName('update')
         .setDescription('Pulls the latest update from github'),
     run: ({interaction, client, handler}) => {
-        console.log(interaction)
-        let author = interaction.author.id;
+        let author = interaction.user.id;
         let processPath = process.env.batPath;
         if(AllowedAccounts.includes(author))
         {
