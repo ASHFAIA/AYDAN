@@ -20,7 +20,7 @@ module.exports = {
         let processPath = process.env.updateBotPath;
         if(AllowedAccounts.includes(author))
         {
-            interaction.reply("Pulling updates!");
+            interaction.reply("Pulling the latest updates!");
             let path = __dirname+"/../../data/updateRanIn.json";
             let json = require(path);
             json.msg = interaction;
