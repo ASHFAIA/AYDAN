@@ -132,3 +132,4 @@ dist
 database/
 .env
 update.cmd
+updateRanIn.json

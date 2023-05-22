@@ -1,8 +1,18 @@
-
 const { Client, IntentsBitField } = require('discord.js');
 const { CommandHandler } = require('djs-commander');
 const path = require('path')
+const lastMsg = require(__dirname+'../updateRanIn.json')
+const child_process = require('child_process')
 require('dotenv').config();
+
+process.on('uncaughtException', function (err) {
+    if(process.uptime < 20)
+    {
+        lastMsg.msg.send("Error updating! Rolling back.")
+        console.error(err);
+        console.log("Error occurred");
+        
+  }});
 
 const bot = new Client({
     intents: [
@@ -13,6 +23,7 @@ const bot = new Client({
     ]
 })
 
+
 new CommandHandler({
     client : bot,
     commandsPath: path.join(__dirname,'commands'),
@@ -21,3 +32,4 @@ new CommandHandler({
 
 
 bot.login(process.env.Token);
+
