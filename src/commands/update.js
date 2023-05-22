@@ -21,7 +21,7 @@ module.exports = {
         if(AllowedAccounts.includes(author))
         {
             interaction.reply("Pulling updates!");
-            let path =  "__dirname/../../data/updateRanIn.json";
+            let path = __dirname+"/../../data/updateRanIn.json";
             let json = require(path);
             json.msg = interaction;
             saveData(path, json);
