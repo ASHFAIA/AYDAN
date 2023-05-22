@@ -1,7 +1,7 @@
 const { Client, IntentsBitField } = require('discord.js');
 const { CommandHandler } = require('djs-commander');
 const path = require('path')
-const lastMsg = require(path.resolve(__dirname+'../updateRanIn.json'))
+const lastMsg = require(path.resolve(__dirname+'/../updateRanIn.json'))
 const child_process = require('child_process')
 require('dotenv').config();
 
