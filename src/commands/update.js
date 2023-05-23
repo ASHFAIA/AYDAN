@@ -1,14 +1,14 @@
 const { SlashCommandBuilder } = require('discord.js');
 const child_process = require('child_process');
 const fs = require('fs');
+const path = require('path');
 require('dotenv').config();
 const AllowedAccounts = process.env.gitAccounts;
 
 function saveData(filePath, data)
 {   
-    fs.writeFile(filePath, JSON.stringify(data, null, 2), function writeJSON(err) {
-        if (err) return console.log(err);
-})}
+    fs.writeFile(filePath, JSON.stringify(data, null, 2),'utf8', callback)
+}
 
 
 module.exports = {
@@ -20,11 +20,11 @@ module.exports = {
         let processPath = process.env.updateBotPath;
         if(AllowedAccounts.includes(author))
         {
-            interaction.reply("Pulling the latest updates!");
-            let path = __dirname+"/../../data/updateRanIn.json";
-            let json = require(path);
-            json.msg = interaction;
-            saveData(path, json);
+            interaction.reply("Pulling updates!");
+            let Filepath = path.resolve(__dirname+"/../../updateRanIn.json");
+            let f = require(Filepath);
+            f.msg = interaction;
+            saveData(Filepath, f);
             child_process.exec(processPath, function(error, stdout, stderr) {
                 console.log(stdout);
             })
