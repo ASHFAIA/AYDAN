@@ -1,18 +1,9 @@
 const { Client, IntentsBitField } = require('discord.js');
 const { CommandHandler } = require('djs-commander');
-const path = require('path')
-const lastMsg = require(path.resolve(__dirname+'/../updateRanIn.json'))
 const child_process = require('child_process')
+const path = require('path')
 require('dotenv').config();
 
-process.on('uncaughtException', function (err) {
-    if(process.uptime < 20)
-    {
-        lastMsg.msg.send("Error updating! Rolling back.")
-        console.error(err);
-        console.log("Error occurred");
-        
-  }});
 
 const bot = new Client({
     intents: [

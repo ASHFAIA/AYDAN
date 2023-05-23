@@ -1,14 +1,14 @@
 {
   "name": "aydan",
-  "version": "1.0.0",
-  "description": "Aydan is a discord bot created to run commands and moderate school discord servers\r hehe micheal jackson",
+  "version": "1.1.0",
+  "description": "Aydan is a discord bot created to run commands and moderate school discord servers",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
+    "start": "nodemon",
+    "update": "cd database && node update.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "RuthlessPuppet and ASHFA_IA",
   "license": "ISC",
   "dependencies": {
     "child_process": "^1.0.2",
