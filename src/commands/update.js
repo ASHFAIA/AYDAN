@@ -15,7 +15,7 @@ module.exports = {
         exec(path.resolve(__dirname + "/../../database/update.cmd"), (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
-            if (error) console.log("Process encountered an error: " + error);
+            if (error) console.log("Process encountered error: " + error);
             interaction.reply({content:stdout, ephemeral:true})
         })
         //interaction.reply({content:data, ephemeral:true})
